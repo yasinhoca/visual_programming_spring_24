@@ -27,5 +27,38 @@ public class Veritabani {
         }
     }
 
+    static void sil(String sorgu){
+        Statement st;
+        try {
+            st = conn.createStatement();
+            st.execute(sorgu);
+
+        } catch (SQLException e2) {
+            throw new RuntimeException(e2);
+        }
+    }
+
+    static void ekle(String sorgu){
+        Statement st;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sorgu);
+
+        } catch (SQLException e2) {
+            throw new RuntimeException(e2);
+        }
+    }
+
+    static void guncelle(String sorgu){
+        Statement st;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sorgu);
+
+        } catch (SQLException e2) {
+            throw new RuntimeException(e2);
+        }
+    }
+
 
 }
